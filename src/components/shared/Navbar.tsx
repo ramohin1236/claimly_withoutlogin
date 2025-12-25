@@ -18,7 +18,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 ">
+    <header className="sticky top-0 z-50 bg-[#f5f7fa]">
       <div className="container mx-auto px-4 sm:px-6 py-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -54,7 +54,7 @@ export default function Navbar() {
             {/* <button className="px-4 py-2 text-sm border border-[#2563EB] text-[#2563EB] rounded hover:bg-blue-50 transition">
               Login
             </button> */}
-            <Button variant="outline" >
+            <Button variant="outline">
               Login
             </Button>
             <Button variant="primary">
@@ -119,7 +119,7 @@ export default function Navbar() {
               {/* <button className="w-full px-4 py-3 text-sm border border-[#2563EB] text-[#2563EB] rounded hover:bg-blue-50 transition">
                 Login
               </button> */}
-              <Button variant="outline" fullWidth>
+              <Button variant="outline"  fullWidth>
                 Login
               </Button>
               <Button variant="primary" fullWidth>

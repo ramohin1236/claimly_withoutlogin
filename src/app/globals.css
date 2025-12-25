@@ -77,12 +77,38 @@ body {
 .bg-brand {
   background-color: var(--brand_color);
 }
+.text-brand {
+  color: var(--brand_color);
+}
+
+.default-text {
+  color: #64748B;
+  font-size: 14px;      
+  line-height: 120%;
+}
+
+/* Tablet (≥ 768px) */
+@media (min-width: 768px) {
+  .default-text {
+    font-size: 16px;
+  }
+}
+
+/* Desktop (≥ 1024px) */
+@media (min-width: 1024px) {
+  .default-text {
+    font-size: 16px;
+  }
+}
 
 .hover\:bg-brand-hover:hover {
   background-color: var(--brand_hover);
 }
 
 .nav-container{
+  @apply container mx-auto
+}
+.web-container{
   @apply container mx-auto
 }
 
