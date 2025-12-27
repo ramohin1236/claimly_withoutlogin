@@ -3,6 +3,8 @@ import LogoSection from './../components/Home/LogoSection';
 import KeyBenefits from "@/components/Home/KeyBenefits";
 import Timeline from "@/components/Home/Timeline";
 import Understand from "@/components/Home/Understand";
+import WhoHelp from "@/components/Home/WhoHelp";
+import TestimonialSlider from "@/components/Home/TestimonialSlider";
 
 
 const Home = () => {
@@ -13,6 +15,8 @@ const Home = () => {
          <KeyBenefits/>
          <Timeline/>
          <Understand/>
+         <WhoHelp/>
+         <TestimonialSlider/>
     </div>
   )
 }

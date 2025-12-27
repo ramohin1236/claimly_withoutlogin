@@ -7,7 +7,7 @@ export const InfoIcon = (props: React.SVGProps<SVGSVGElement>) => {
       fill="none"
       {...props}
     >
-      <g clip-path="url(#clip0_17160_5234)">
+      <g clipPath="url(#clip0_17160_5234)">
         <path
           d="M7 0C5.61553 0 4.26216 0.410543 3.11101 1.17971C1.95987 1.94888 1.06266 3.04213 0.532846 4.32122C0.003033 5.6003 -0.13559 7.00777 0.134506 8.36563C0.404603 9.7235 1.07129 10.9708 2.05026 11.9497C3.02922 12.9287 4.2765 13.5954 5.63437 13.8655C6.99224 14.1356 8.3997 13.997 9.67879 13.4672C10.9579 12.9373 12.0511 12.0401 12.8203 10.889C13.5895 9.73785 14 8.38447 14 7C13.998 5.1441 13.2599 3.36479 11.9475 2.05247C10.6352 0.74015 8.8559 0.0020073 7 0ZM7 12.8333C5.84628 12.8333 4.71846 12.4912 3.75918 11.8502C2.79989 11.2093 2.05222 10.2982 1.61071 9.23232C1.16919 8.16642 1.05368 6.99353 1.27876 5.86197C1.50384 4.73042 2.05941 3.69102 2.87521 2.87521C3.69102 2.0594 4.73042 1.50383 5.86198 1.27875C6.99353 1.05367 8.16642 1.16919 9.23232 1.6107C10.2982 2.05221 11.2093 2.79989 11.8502 3.75917C12.4912 4.71846 12.8333 5.84628 12.8333 7C12.8316 8.54658 12.2165 10.0293 11.1229 11.1229C10.0293 12.2165 8.54658 12.8316 7 12.8333Z"
           fill={props?.fill || "#64748B"}
@@ -42,49 +42,49 @@ export const ListIcon = (props: React.SVGProps<SVGSVGElement>) => {
       <path
         d="M11.3333 4H14V6.66667"
         stroke="#2563EB"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         fill={props?.fill || "#2563EB"}
       />
       <path
         d="M10 8L14 4"
         stroke="#2563EB"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         fill={props?.fill || "#2563EB"}
       />
       <path
         d="M4.66667 16.0002H2V13.3335"
         stroke="#2563EB"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         fill={props?.fill || "#2563EB"}
       />
       <path
         d="M6 12L2 16"
         stroke="#2563EB"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         fill={props?.fill || "#2563EB"}
       />
       <path
         d="M9.34667 3.46684C8.91334 3.38017 8.45999 3.3335 7.99999 3.3335C4.31999 3.3335 1.33333 6.32016 1.33333 10.0002C1.33333 10.4602 1.38 10.9068 1.46667 11.3335"
         stroke="#2563EB"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         fill={props?.fill || "#2563EB"}
       />
       <path
         d="M6.65332 16.5332C7.08665 16.6198 7.54 16.6665 8 16.6665C11.68 16.6665 14.6667 13.6798 14.6667 9.99984C14.6667 9.5465 14.62 9.09984 14.5333 8.6665"
         stroke="#2563EB"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         fill={props?.fill || "#2563EB"}
       />
     </svg>
