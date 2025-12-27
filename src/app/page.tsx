@@ -5,6 +5,7 @@ import Timeline from "@/components/Home/Timeline";
 import Understand from "@/components/Home/Understand";
 import WhoHelp from "@/components/Home/WhoHelp";
 import TestimonialSlider from "@/components/Home/TestimonialCarousel";
+import Recharts from "@/components/shared/Recharts";
 
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
          <Understand/>
          <WhoHelp/>
          <TestimonialSlider/>
+         <Recharts/>
     </div>
   )
 }
