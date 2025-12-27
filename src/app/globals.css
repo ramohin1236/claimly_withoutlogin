@@ -87,6 +87,15 @@ body {
   line-height: 120%;
 }
 
+.border-color-default {
+  border-radius: 8px;
+  border: solid 1px #3B82F6;
+}
+
+.text-color-secondary {
+  color: var(--secondary_text);
+}
+
 /* Tablet (≥ 768px) */
 @media (min-width: 768px) {
   .default-text {
