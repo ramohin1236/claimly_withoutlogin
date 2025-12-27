@@ -4,7 +4,7 @@ import KeyBenefits from "@/components/Home/KeyBenefits";
 import Timeline from "@/components/Home/Timeline";
 import Understand from "@/components/Home/Understand";
 import WhoHelp from "@/components/Home/WhoHelp";
-import TestimonialSlider from "@/components/Home/TestimonialSlider";
+import TestimonialSlider from "@/components/Home/TestimonialCarousel";
 
 
 const Home = () => {
