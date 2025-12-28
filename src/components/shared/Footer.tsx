@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="footer-link text-white text-xs">
+                <Link href="/privacy_policy" className="footer-link text-white text-xs">
                   Privacy Policy
                 </Link>
               </li>

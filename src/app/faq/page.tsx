@@ -52,37 +52,41 @@ const Faq = () => {
   return (
     <div>
       {/* heading */}
-      <div className="flex flex-col py-10 px-7 lg:py-20 lg:px-24 bg-linear-to-l from-[#DBEAFE] to-[#EFF6FF] outline-[1px] outline-[#0000001A] xl:flex-row justify-between items-center  gap-10">
-        <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row gap-10 justify-between items-center">
-            {/* left */}
-            <div className="flex flex-col gap-4">
-              <h2 className="text-3xl lg:text-[40px] leading-[120%] font-semibold">
-                FA<span className="text-brand">Q</span>
-              </h2>
-              <p className="tracking-[1px] leading-[120%] text-color-secondary">
-                Find quick answers about account setup, claim submissions,
-                uploads, and PDF reports.
-              </p>
-            </div>
+      <div className="flex flex-col py-10 px-7 lg:py-20 lg:px-24 bg-linear-to-l from-[#DBEAFE] to-[#EFF6FF] outline-[1px] outline-[#0000001A] xl:flex-row justify-between items-center  gap-10 ">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="container mx-auto">
+            <div className="flex flex-col md:flex-row gap-10 justify-between items-center">
+              {/* left */}
+              <div className="flex flex-col gap-4">
+                <h2 className="text-3xl lg:text-[40px] leading-[120%] font-semibold">
+                  <span className="bg-gradient-to-r from-[#1E293B] to-[#2563EB] bg-clip-text text-transparent">
+                    FA
+                  </span>
+                  <span className="text-[#2563EB]">Q</span>
+                </h2>
 
-            {/* right */}
-            <div className="w-">
-              <Image
-                src={images}
-                alt="hro"
-                width={100}
-                height={100}
-                className="md:w-full"
-              />
+                <p className="tracking-[1px] leading-[120%] text-color-secondary">
+                  Find quick answers about account setup, claim submissions,
+                  uploads, and PDF reports.
+                </p>
+              </div>
+
+              {/* right */}
+              <div className="w-">
+                <Image
+                  src={images}
+                  alt="hro"
+                  width={100}
+                  height={100}
+                  className="md:w-full"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <div className="container mx-auto px-6 lg:px-8 py-10 lg:py-28">
-      
-
         {/* FAQ List */}
         <div className="divide-y divide-gray-300">
           {faqData.map((item, index) => {
