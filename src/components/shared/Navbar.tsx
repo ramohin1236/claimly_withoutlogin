@@ -13,7 +13,7 @@ export default function Navbar() {
     { name: "Home", href: "/", isActive: true },
     { name: "Claimly Guides", href: "/claimly_guides" },
     { name: "About Us", href: "/about" },
-    { name: "FAQ", href: "#" },
+    { name: "FAQ", href: "/faq" },
     { name: "Contact Us", href: "#" },
   ];
 

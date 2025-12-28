@@ -1,0 +1,143 @@
+"use client";
+
+import { useState } from "react";
+import images from "../../../public/hero 2-Photoroom.svg";
+import Image from "next/image";
+
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+const faqData: FAQItem[] = [
+  {
+    question: "What is Claimly?",
+    answer:
+      "Claimly is a digital platform that helps users submit, manage, and track motor accident insurance claims — all in one secure and organized place.",
+  },
+  {
+    question: "Who can use Claimly?",
+    answer:
+      "The launch events will take place in New York on July 18th, San Francisco on July 25th, and virtually on August 1st. Detailed schedules will be emailed after registration.",
+  },
+  {
+    question: "How does a user log in?",
+    answer:
+      "Yes, you may bring one guest with you. Please ensure that both names are included during registration as seats are limited.",
+  },
+  {
+    question: "Can users manage multiple claims?",
+    answer:
+      "Simply visit our official website and click the 'Register' button at the top of the page. You’ll receive a confirmation email within minutes.",
+  },
+  {
+    question: "Can users upload personal documents securely?",
+    answer:
+      "Yes, most venues have dedicated parking areas for attendees. You’ll receive parking details in your confirmation email.",
+  },
+  {
+    question: "Is Claimly available on mobile?",
+    answer:
+      "For any inquiries, you can email us at events@yourcompany.com or call our support line at +1 (800) 123-4567 between 9 AM – 5 PM.",
+  },
+];
+
+const Faq = () => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
+
+  const toggleFAQ = (index: number) => {
+    setActiveIndex((prev) => (prev === index ? null : index));
+  };
+
+  return (
+    <div>
+      {/* heading */}
+      <div className="flex flex-col py-10 px-7 lg:py-20 lg:px-24 bg-linear-to-l from-[#DBEAFE] to-[#EFF6FF] outline-[1px] outline-[#0000001A] xl:flex-row justify-between items-center  gap-10">
+        <div className="container mx-auto">
+          <div className="flex flex-col md:flex-row gap-10 justify-between items-center">
+            {/* left */}
+            <div className="flex flex-col gap-4">
+              <h2 className="text-3xl lg:text-[40px] leading-[120%] font-semibold">
+                FA<span className="text-brand">Q</span>
+              </h2>
+              <p className="tracking-[1px] leading-[120%] text-color-secondary">
+                Find quick answers about account setup, claim submissions,
+                uploads, and PDF reports.
+              </p>
+            </div>
+
+            {/* right */}
+            <div className="w-">
+              <Image
+                src={images}
+                alt="hro"
+                width={100}
+                height={100}
+                className="md:w-full"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-6 lg:px-8 py-10 lg:py-28">
+      
+
+        {/* FAQ List */}
+        <div className="divide-y divide-gray-300">
+          {faqData.map((item, index) => {
+            const isOpen = activeIndex === index;
+
+            return (
+              <div key={index}>
+                {/* Question */}
+                <button
+                  onClick={() => toggleFAQ(index)}
+                  className={`w-full flex items-center gap-4 py-6 text-left font-medium transition-colors
+                  ${
+                    isOpen
+                      ? "text-blue-700"
+                      : "text-slate-900 hover:text-blue-700"
+                  }
+                `}
+                >
+                  <span className="flex-1 text-base md:text-[24px] leading-[140%]">
+                    {item.question}
+                  </span>
+
+                  {/* Icon */}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                    className="w-[14px] h-[14px] fill-current shrink-0"
+                  >
+                    {/* minus */}
+                    <path d="M40.421 215.579H471.579C493.868 215.579 512 233.711 512 256s-18.132 40.421-40.421 40.421H40.421C18.132 296.421 0 278.289 0 256s18.132-40.421 40.421-40.421z" />
+
+                    {/* plus */}
+                    {!isOpen && (
+                      <path d="M215.579 40.421C215.579 18.132 233.711 0 256 0s40.421 18.132 40.421 40.421v431.158C296.421 493.868 278.289 512 256 512s-40.421-18.132-40.421-40.421V40.421z" />
+                    )}
+                  </svg>
+                </button>
+
+                {/* Answer */}
+                <div
+                  className={`overflow-hidden transition-all duration-300 ease-in-out
+                  ${isOpen ? "max-h-[500px] pb-6" : "max-h-0"}
+                `}
+                >
+                  <p className="text-[15px] md:text-base text-slate-600 leading-relaxed!">
+                    {item.answer}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Faq;
