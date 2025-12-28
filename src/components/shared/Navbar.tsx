@@ -14,7 +14,7 @@ export default function Navbar() {
     { name: "Claimly Guides", href: "/claimly_guides" },
     { name: "About Us", href: "/about" },
     { name: "FAQ", href: "/faq" },
-    { name: "Contact Us", href: "#" },
+    { name: "Contact Us", href: "/contact" },
   ];
 
   return (
