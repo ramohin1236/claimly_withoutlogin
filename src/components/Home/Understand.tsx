@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Understand = () => {
   return (
-    <div className="web-container section-padding">
+    <div className="container mx-auto py-10 lg:py-28">
       <div className="flex flex-col py-10 px-7 lg:py-20 lg:px-24 bg-linear-to-br from-[#DBEAFE] to-[#F9FAFB] rounded-[40px] outline-[1px] outline-[#0000001A] xl:flex-row justify-between items-center  gap-10">
         {/* left section */}
         <div className="flex-1 flex flex-col gap-4">

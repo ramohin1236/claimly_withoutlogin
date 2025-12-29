@@ -10,7 +10,7 @@ import logosixth from '../../../public/image 21 (6).png'
 
 const LogoSection = () => {
   return (
-    <div className='web-container section-padding'>
+    <div className='container mx-auto py-10 lg:py-28'>
       <div className='flex flex-col p-6 lg:p-16 bg-linear-to-br from-[#DBEAFE] to-[#F9FAFB] rounded-[40px] outline-[1px] outline-[#0000001A] xl:flex-row justify-between items-center  gap-10'>
         {/* left section */}
         <div className='flex flex-1 flex-col gap-4 md:gap-2.5'>

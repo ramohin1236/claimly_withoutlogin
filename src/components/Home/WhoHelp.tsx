@@ -2,6 +2,7 @@ import React from "react";
 import leftSideImage from "../../../public/leftside_image.svg";
 import Image from "next/image";
 import { InfoIcon, ListIcon } from "../icons-svg/customIcons";
+import imgg from "../../../public/maximize-circle.svg"
 const WhoHelp = () => {
   return (
     <div className="mt-10 md:mt-28">
@@ -43,8 +44,9 @@ const WhoHelp = () => {
                   "Claims that feel stalled, delayed, or stuck in review",
                   "Situations where you’re considering a complaint but aren’t sure it’s worth it",
                 ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-2.5">
-                    <ListIcon className="list-icon shrink-0 mt-0.5" />
+                  <li key={index} className="flex items-center  gap-2.5">
+                    {/* <ListIcon className="list-icon shrink-0 mt-0.5" /> */}
+                    <Image src={imgg} width={100} height={100} alt="af" className="w-3"/>
                     <span className="default-list-text">{item}</span>
                   </li>
                 ))}
