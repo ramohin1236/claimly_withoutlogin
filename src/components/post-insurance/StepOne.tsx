@@ -4,6 +4,7 @@ import insurer from "../../../public/insurer.svg";
 import Image from "next/image";
 import CustomDropDown from "./CustomDropDown";
 
+
 interface StepProps {
     onNext: () => void;
 }
@@ -96,6 +97,7 @@ const StepOne: React.FC<StepProps> = ({ onNext }) => {
                     Next
                 </button>
             </div>
+          
         </form>
     );
 };
