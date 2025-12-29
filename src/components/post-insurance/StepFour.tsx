@@ -36,6 +36,11 @@ const StepFour: React.FC<StepProps> = ({ onPrev }) => {
         setFiles(files.filter(f => f !== fileName));
     };
 
+    const isImage = (fileName: string) => {
+        const ext = fileName.split('.').pop()?.toLowerCase();
+        return ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg'].includes(ext || '');
+    };
+
     return (
         <form onSubmit={handleSubmit} className="space-y-6">
             <div className="flex gap-2">
@@ -81,11 +86,22 @@ const StepFour: React.FC<StepProps> = ({ onPrev }) => {
                     {files.map((file, index) => (
                         <div key={index} className="flex justify-between items-center bg-[#EFF6FF] border border-[#2563EB] rounded-[12px] px-4 py-3">
                             <div className="flex items-center gap-3">
-                                <div className="bg-white p-2 rounded-lg border border-[#DBEAFE] flex flex-col items-center">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7 18H17M7 14H17M7 10H13M14 2H19C20.1046 2 21 2.89543 21 4V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V4C3 2.89543 3.89543 2 5 2H11L14 2Z" stroke="#EF4444" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg>
-                                    <span className="text-[8px] font-bold text-red-500 uppercase mt-[-4px]">pdf</span>
+                                <div className="bg-white p-2 rounded-lg border border-[#DBEAFE] flex flex-col items-center min-w-[40px]">
+                                    {isImage(file) ? (
+                                        <>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M4 16L8.58579 11.4142C9.36683 10.6332 10.6332 10.6332 11.4142 11.4142L16 16M14 14L15.5858 12.4142C16.3668 11.6332 17.6332 11.6332 18.4142 12.4142L20 14M14 8H14.01M6 20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4H6C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20Z" stroke="#2563EB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                            </svg>
+                                            <span className="text-[8px] font-bold text-blue-500 uppercase mt-[-4px]">img</span>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7 18H17M7 14H17M7 10H13M14 2H19C20.1046 2 21 2.89543 21 4V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V4C3 2.89543 3.89543 2 5 2H11L14 2Z" stroke="#EF4444" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                            </svg>
+                                            <span className="text-[8px] font-bold text-red-500 uppercase mt-[-4px]">pdf</span>
+                                        </>
+                                    )}
                                 </div>
                                 <span className="text-[#64748B] text-sm">{file}</span>
                             </div>

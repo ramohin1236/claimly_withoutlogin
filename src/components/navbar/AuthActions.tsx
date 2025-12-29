@@ -252,6 +252,11 @@ const AuthActions: React.FC<AuthActionsProps> = ({
     };
   }, [open]);
 
+  const handleClose = () => {
+    setOpen(false);
+    onActionClick?.();
+  };
+
   // Dummy user data - replace with your actual user state/context
   const userData = {
     name: "Mojahid Islam",
@@ -316,14 +321,15 @@ const AuthActions: React.FC<AuthActionsProps> = ({
 
             {/* Menu */}
             <div className="mt-3 flex flex-col gap-[3px]">
-              <MenuItem href="/my_claims" icon={<FileText size={18} />} label="My Claims" />
-              <MenuItem href="/my_profile" icon={<User size={18} />} label="My Profile" />
-              <MenuItem href="/settings" icon={<Settings size={18} />} label="Account Settings" />
+              <MenuItem href="/my_claims" icon={<FileText size={18} />} label="My Claims" onClick={handleClose} />
+              <MenuItem href="/my_profile" icon={<User size={18} />} label="My Profile" onClick={handleClose} />
+              <MenuItem href="/settings" icon={<Settings size={18} />} label="Account Settings" onClick={handleClose} />
             </div>
 
             {/* Logout */}
             <Link
               href="/"
+              onClick={handleClose}
               className="mt-2 flex items-center gap-3 px-3 py-2 rounded-md text-[#64748B] hover:bg-red-50 transition-colors"
             >
               <LogOut size={18} />
@@ -357,10 +363,10 @@ const AuthActions: React.FC<AuthActionsProps> = ({
           </div>
 
           <div className="mt-4 flex flex-col gap-[3px] text-[#64748B]">
-            <MobileItem href="/my_claims" icon={<FileText />} label="My Claims" />
-            <MobileItem href="/my_profile" icon={<User />} label="My Profile" />
-            <MobileItem href="/settings" icon={<Settings />} label="Account Settings" />
-            <MobileItem href="/" icon={<LogOut />} label="Sign Out" danger />
+            <MobileItem href="/my_claims" icon={<FileText />} label="My Claims" onClick={handleClose} />
+            <MobileItem href="/my_profile" icon={<User />} label="My Profile" onClick={handleClose} />
+            <MobileItem href="/settings" icon={<Settings />} label="Account Settings" onClick={handleClose} />
+            <MobileItem href="/" icon={<LogOut />} label="Sign Out" onClick={handleClose} danger />
           </div>
         </div>
       </div>
@@ -369,15 +375,15 @@ const AuthActions: React.FC<AuthActionsProps> = ({
 };
 
 /* Reusable Components remained as defined in your original file */
-const MenuItem = ({ href, icon, label }: { href: string; icon: React.ReactNode; label: string }) => (
-  <Link href={href} className="flex items-center gap-3 px-3 py-3 rounded-md text-[#64748B] bg-[#2563EB05] hover:bg-gray-100 transition-colors">
+const MenuItem = ({ href, icon, label, onClick }: { href: string; icon: React.ReactNode; label: string; onClick?: () => void }) => (
+  <Link href={href} onClick={onClick} className="flex items-center gap-3 px-3 py-3 rounded-md text-[#64748B] bg-[#2563EB05] hover:bg-gray-100 transition-colors">
     {icon}
     <span className="text-sm font-medium">{label}</span>
   </Link>
 );
 
-const MobileItem = ({ href, icon, label, danger }: { href: string; icon: React.ReactNode; label: string, danger?: boolean }) => (
-  <Link href={href} className={`flex items-center gap-3 w-full px-3 py-3 rounded-md transition-colors ${danger ? "text-red-500 hover:bg-red-50" : "hover:bg-gray-100"}`}>
+const MobileItem = ({ href, icon, label, danger, onClick }: { href: string; icon: React.ReactNode; label: string; danger?: boolean; onClick?: () => void }) => (
+  <Link href={href} onClick={onClick} className={`flex items-center gap-3 w-full px-3 py-3 rounded-md transition-colors ${danger ? "text-red-500 hover:bg-red-50" : "hover:bg-gray-100"}`}>
     {icon}
     <span className="font-medium">{label}</span>
   </Link>
