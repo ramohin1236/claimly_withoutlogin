@@ -38,11 +38,11 @@ const RechartsComponent = () => {
             margin={{ top: 30, right: 0, left: 0, bottom: 25 }}
             barCategoryGap="10%"
             barGap={0}
-           
+
           >
             <XAxis
               dataKey="name"
-              padding={{ left: 0, right: 0 }} 
+              padding={{ left: 0, right: 0 }}
               tick={{
                 fontSize: 14,
                 fontWeight: 700,

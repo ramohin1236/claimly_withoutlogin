@@ -14,7 +14,7 @@ const DUMMY_CLAIMS = [
     title: "Motor insurance claim",
     insurer: "NRMA",
     date: "12 March 2025",
-    avatarUrl: "/man.png"
+    avatarUrl: null
   },
   {
     id: "2",
@@ -97,6 +97,9 @@ const MyClaimsPage = () => {
   const [activeTab, setActiveTab] = useState<ClaimStatus>("under-review");
 
   const filteredClaims = DUMMY_CLAIMS.filter(claim => claim.status === activeTab);
+
+    // const UserAvatar = ({ size = 36, fontSize = "text-sm" }: { size?: number, fontSize?: string }) => {
+    // const firstLetter = DUMMY_CLAIMS.map((usr, i)=>name.charAt(0).toUpperCase())}
 
   return (
     <div className="min-h-screen ">
