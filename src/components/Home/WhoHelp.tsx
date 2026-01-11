@@ -112,7 +112,7 @@ const WhoHelp = () => {
               </p>
 
               <p className="default-list-text font-medium">
-                Your report may include:
+                What we help with:
               </p>
 
               <ul className="space-y-3">
