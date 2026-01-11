@@ -24,7 +24,7 @@ const LogoSection = () => {
             <p className="default-list-text">
               Claimly can be used with all Australian general insurers.
             </p>
-            <p className="default-list-text">What we help with:</p>
+            <p className="default-list-text">Your report may include:</p>
           </div>
           <div>
             <ul className="mt-2.5 space-y-2.5">
