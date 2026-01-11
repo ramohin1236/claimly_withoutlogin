@@ -29,7 +29,7 @@ const LogoSection = () => {
           <div>
             <ul className="mt-2.5 space-y-2.5">
               {[
-                "Liability in dispute",
+                
                 "Benchmarking your situation against AFCA decisions",
                 "Key considerations under the Insurance Contracts Act 1984 (Cth)",
                 "Insurer obligations under the General Insurance Code of Practice (GICOP)",
